@@ -9,13 +9,11 @@ void criarQuadro(char quadro[LINHAS][COLUNAS]) {
         }
     }
 
-    // Preenche a primeira e a última linha com '-'
     for (int j = 0; j < COLUNAS; j++) {
         quadro[0][j] = '-';
         quadro[LINHAS - 1][j] = '-';
     }
 
-    // Preenche a primeira e a última coluna com '|', exceto nas extremidades
     for (int i = 1; i < LINHAS - 1; i++) {
         quadro[i][0] = '|';
         quadro[i][COLUNAS - 1] = '|';

@@ -17,13 +17,11 @@ void desenharCometa(char quadro[LINHAS][COLUNAS], unsigned int seed) {
     srand(seed);
     int linha, coluna;
 
-    // Tenta encontrar uma posição livre para o cometa
     do {
         linha = rand() % LINHAS;         
         coluna = rand() % (COLUNAS - 4); 
     } while (!posicaoLivre(quadro, linha, coluna, 4, 1)); 
 
-    // Desenha o cometa no quadro
     quadro[linha][coluna] = '#';      
     quadro[linha][coluna + 1] = '-';  
     quadro[linha][coluna + 2] = '-';  

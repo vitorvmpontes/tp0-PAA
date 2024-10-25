@@ -16,39 +16,37 @@ int main() {
 
     int qtdObras = 0, option = 0, i;
 
-    do{
+    do {
+        
         unsigned int seed = (unsigned int) time(NULL);
 
-        do{
+        do {
             imprimeOpcoesMenu();
 
-    printf("Digite o tipo de figura basica desejada: \n");
-    scanf("%d", &option);
-    printf("\n");
+            printf("Digite o tipo de figura basica desejada: \n");
+            scanf("%d", &option);
 
-    if (option == 6){
-        printf("\nVolte sempre!\n");
-        exit(1);
-    }
+            printf("\n");
 
-    if(option > 6){
-        printf("Opcao invalida! Tente novamente...\n\n");
-        break;
-    }
+            if (option == 6){
+                 printf("\nVolte sempre!\n");
+                 exit(1);
+            }
 
-    printf("Digite a quantidade de figuras (menor ou igual a zero para aleatorio): \n");
-    scanf("%d", &qtdObras);
-    printf("\n");
+            if(option > 6){
+                 printf("Opcao invalida! Tente novamente...\n\n");
+                 break;
+            }
 
-    if (qtdObras <= 0) qtdObras = rand() % 100 + 1;
-   
-    if (qtdObras > 100) qtdObras = 100;
+            printf("Digite a quantidade de figuras (menor ou igual a zero para aleatorio): \n");
+            scanf("%d", &qtdObras);
+            printf("\n");
+
+            if (qtdObras <= 0) qtdObras = rand() % 100 + 1;
+            if (qtdObras > 100) qtdObras = 100;
     
-    } while (option > 6);
+        } while (option > 6);
         
-    
-    
-
         switch (option){
             case 1:
                 for (i = 0; i < qtdObras; i++){
